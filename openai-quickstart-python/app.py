@@ -1,3 +1,5 @@
+'''This script create picture variation
+'''
 import os
 import keyboard
 import time
@@ -11,13 +13,15 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 ###
 image_name = "output_tileset.png"
-### 
+###
+path = os.path.join("pics",image_name)
 def main():
-    print('Hello, world!')
+    print('Hello, world!\nPress Alt+P for a variantion\nIt takes approximately 10-20 seconds')
     while True:
-        if keyboard.is_pressed('alt+p'):
+        if keyboard.is_pressed('Alt+P'):
+            print('working')
             response = openai.Image.create_variation(
-                image=open(image_name, "rb"),
+                image=open(path, "rb"),
                 n=1,
                 size="1024x1024"
             )
