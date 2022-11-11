@@ -1,4 +1,4 @@
-'''This script create picture variation
+'''This script create picture variation. You need openai key in order to execute.
 '''
 import os
 import keyboard
