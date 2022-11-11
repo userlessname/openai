@@ -3,8 +3,6 @@
 import os
 import keyboard
 import time
-
-
 import openai
 from flask import Flask, redirect, render_template, request, url_for
 
